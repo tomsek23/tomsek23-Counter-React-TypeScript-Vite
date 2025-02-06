@@ -1,0 +1,102 @@
+// scss
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--ff-regular: 'Montserrat', serif;
+	--fs-h1: 2rem;
+
+	--main-color: #213769;
+
+	--padding-regular: 5rem;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: var(--black);
+}
+
+h1 {
+	font-family: var(--ff-regular);
+	font-style: var(--fs-h1);
+	font-weight: 400;
+	letter-spacing: 5px;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+body {
+	background-color: #eee;
+	#root {
+		width: 100%;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 5rem;
+			max-width: 50dvw;
+			max-height: 50dvh;
+			width: 100%;
+			height: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			padding: var(--padding-regular);
+			border: 0.1rem solid var(--main-color);
+			border-radius: 0.5rem;
+			-webkit-box-shadow: 8px 8px 24px 0px rgba(33, 55, 105, 1);
+			-moz-box-shadow: 8px 8px 24px 0px rgba(33, 55, 105, 1);
+			box-shadow: 8px 8px 24px 0px rgba(33, 55, 105, 1);
+			background-color: #fff;
+			header {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 2rem;
+			}
+			.counter-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 3rem;
+				.counter-icon {
+					font-size: 2.5rem;
+					cursor: pointer;
+
+					&.gray {
+						color: #acab69;
+					}
+				}
+				.input {
+					input {
+						max-width: 10rem;
+						height: 15rem;
+						-webkit-box-shadow: inset -1px -1px 1px 1px rgba(33, 55, 105, 1);
+						-moz-box-shadow: inset -1px -1px 1px 1px rgba(33, 55, 105, 1);
+						box-shadow: inset -1px -1px 1px 1px rgba(33, 55, 105, 1);
+						background-color: #fff;
+						border: 1px solid #213769;
+						border-radius: 0.5rem;
+						text-align: center;
+						font-family: 'Montserrat', serif;
+						font-size: 5rem;
+					}
+				}
+			}
+		}
+	}
+}
