@@ -24,7 +24,7 @@ html {
 
 h1 {
 	font-family: var(--ff-regular);
-	font-style: var(--fs-h1);
+	font-size: var(--fs-h1);
 	font-weight: 400;
 	letter-spacing: 5px;
 }
@@ -82,7 +82,13 @@ body {
 					}
 				}
 				.input {
-					input {
+					.counter-value {
+						position: relative;
+						width: 10rem;
+						overflow: hidden;
+						display: flex;
+						align-items: center;
+						justify-content: center;
 						max-width: 10rem;
 						height: 15rem;
 						-webkit-box-shadow: inset -1px -1px 1px 1px rgba(33, 55, 105, 1);
@@ -94,9 +100,47 @@ body {
 						text-align: center;
 						font-family: 'Montserrat', serif;
 						font-size: 5rem;
+
+						.animated-number {
+							position: absolute;
+							font-size: 5rem;
+							font-weight: bold;
+							will-change: transform, opacity;
+							animation: slideUp 0.3s ease-in-out;
+						}
+
+						@keyframes slideUp {
+							from {
+								transform: translateY(100%);
+								opacity: 0;
+							}
+							to {
+								transform: translateY(0);
+								opacity: 1;
+							}
+						}
 					}
 				}
 			}
 		}
 	}
+}
+
+@keyframes slideDown {
+	from {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.slide-up {
+	animation: slideUp 0.3s ease-in-out;
+}
+
+.slide-down {
+	animation: slideDown 0.3s ease-in-out;
 }
